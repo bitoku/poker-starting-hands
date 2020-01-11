@@ -1,12 +1,12 @@
 import {Card} from "./Card";
-import {Ranks, Suits} from "./Constants";
+import {RANKS, SUITS} from "./Constants";
 
 export class Deck {
     cards: Card[];
     constructor() {
         this.cards = [];
-        for (let s of Suits) {
-            for (let r of Ranks) {
+        for (let s of SUITS) {
+            for (let r of RANKS) {
                 const card: Card = new Card(s, r);
                 this.cards.push(card)
             }

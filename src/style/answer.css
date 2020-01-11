@@ -1,0 +1,9 @@
+.answer {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-size: 5em;
+    font-family: Monospaced, monospace;
+}
