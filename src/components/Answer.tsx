@@ -9,21 +9,13 @@ type Props = {
 const Answer: React.FC<Props> = () => {
     return (
         <div>
-            <div className="answer">
-                <button className="button">1</button>
-                <button className="button">2</button>
-                <button className="button">3</button>
-            </div>
-            <div className="answer">
-                <button className="button">4</button>
-                <button className="button">5</button>
-                <button className="button">6</button>
-            </div>
-            <div className="answer">
-                <button className="button">7</button>
-                <button className="button">8</button>
-                <button className="button">9</button>
-            </div>
+            {[...Array(3)].map((_, i) =>
+                <div key={`${i}-`} className="answer">
+                    {[...Array(3)].map((_, j) =>
+                        <button key={j} className="button">{i*3 + j + 1}</button>
+                    )}
+                </div>
+            )}
         </div>
     )
 };
