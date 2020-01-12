@@ -21,7 +21,9 @@ export class Card {
         if (n < MIN && MAX < n) {
             throw new Error("rank is out of range.")
         }
-        if (n === 10) {
+        if (n === 1) {
+            return 'A'
+        } else if (n === 10) {
             return 'T'
         } else if (n === 11) {
             return 'J'

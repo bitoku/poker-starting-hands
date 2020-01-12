@@ -9,7 +9,7 @@ export const getStartingHand = (card1: Card, card2: Card): string => {
     if (card1.suit === card2.suit) {
         suit = 's';
     }
-    if (card1.rank > card2.rank) {
+    if (card1.rank === 1 || (card2.rank !== 1 && card1.rank > card2.rank)) {
         return card1.R + card2.R + suit;
     }
     return card2.R + card1.R + suit;
